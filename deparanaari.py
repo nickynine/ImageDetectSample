@@ -5,11 +5,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+template = cv2.imread('dataSet\\User.1.1.jpg', 0)
+#template = cv2.imread('watch.jpg')
+cv2.imshow('XXXXXXXXXXXX', template)
 
 def templateMatching():
     cap = cv2.VideoCapture(0)
 
-    while True:
+    while False:
         _, frame = cap.read()
 
         img_gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
@@ -31,7 +34,7 @@ def templateMatching():
     cv2.destroyAllWindows()
 
 
-templateMatching()
+#templateMatching()
 
 
 def edgeDetectionAndGradient():
@@ -174,7 +177,7 @@ def imageOperations():
 #scan()
 #markWatchImage()
 #imageOperations()
-#thresholding()
+theshholding()
 
 
 
